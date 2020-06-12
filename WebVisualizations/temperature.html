@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Max Temperature</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #220901;">
+      <a class="navbar-brand" href="index.html">
+          <img src="assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          Aring DatAn</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+              <a class="dropdown-item" href="humidity.html">Humidity</a>
+              <a class="dropdown-item" href="temperature.html">Max temperature</a>
+              <a class="dropdown-item" href="wind.html">Wind speed</a>
+            </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="comparison.html" tabindex="-1" aria-disabled="true">Plot comparison</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dataset.html" tabindex="-1" aria-disabled="true">Dataset</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          A Tec de Monterrey Data Boot Camp project
+        </span>
+      </div>
+    </nav>
+
+    <!-- MAX TEMPERATURE-->
+    <div class="container-fluid px-md-0" style="background-color: #EDF2F4;">
+      <div class="row justify-content-between no-gutters mx-md-0">
+        <div class="col-12 col-md-4 position-md-sticky d-flex align-items-center vh-md-100 mx-auto" style="top: 0;">  
+          <!-- Sidebar -->
+          <aside class="flex-grow-1 py-8 py-md-10">  
+            <h1 class="display-4" style="color: #BC3908;">Max temperature</h1>
+            <p class="font-size-lg mb-7 text-muted">
+              According to the plot, there seems to be a relation between both variables. 
+              <b> The closer the latitude to the Equator (lat = 0), the hotter it gets</b>. Furthermore,
+              southern cities barely reach a latitude of -40°, meaning that by choosing a city from 
+              that half, it is unlikely to get a temperature lower than 10°C; in comparison to the 
+              northern cities, where you can pick places with temperatures below 0°C.
+            </p>  
+            <!-- List group -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" style="background-color: #EDF2F4;">
+                <h6 class="d-flex mb-0 text-uppercase">
+                  Date <span class="ml-auto">May 4, 2020</span>
+                </h6>
+              </li>
+              <li class="list-group-item" style="background-color: #EDF2F4;">
+                <h6 class="d-flex mb-0 text-uppercase">
+                  Plot type <span class="ml-auto">Scatter</span>
+                </h6>
+              </li>
+              <li class="list-group-item" style="background-color: #EDF2F4;">
+                <!-- Heading -->
+                <h6 class="d-flex mb-0 text-uppercase">
+                  Variables <span class="ml-auto">Latitude / max temp</span>
+                </h6>
+              </li>
+            </ul>
+          </aside>  
+        </div>
+        <div class="col-12 col-md-7">
+          <section class="pt-md-10 my-5 mx-2">
+            <img class="w-100 h-auto shadow-lg" src="visualizations/temperature_vis.png" alt="...">
+          </section>  
+        </div>
+      </div>
+    </div>
+
+   <!--VISUALIZATIONS-->
+   <section class="text-white pb-4 pt-2 separator-bottom" style="background-color: #220901;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10 text-center">
+            <h3>Checkout the other plots!</h3> 
+          </div> 
+          <div class="col-md-3 text-center">
+            <h6 style="color: #F6AA1C;">Cloudiness</h6>
+            <a class= "a" href="cloudiness.html" title=""><img src="assets/cloudiness.png" alt="" style="height: 150; width: 100%;"></a>
+          </div>
+          <div class="col-md-3 text-center">
+            <h6 style="color: #F6AA1C;">Humidity</h6>
+            <a class= "a" href="humidity.html" title=""><img src="assets/humidity.png" alt="" style="height: 150; width: 100%;"></a>
+          </div>
+          <div class="col-md-3 text-center">
+            <h6 style="color: #F6AA1C;">Wind speed</h6>
+            <a class= "a" href="wind.html" title=""><img src="assets/wind.png" alt="" style="height: 150; width: 100%;"></a>
+          </div>            
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer pb-2 pt-2 pr-4 text-right" style="background-color: #EDF2F4;">
+      <span class="text-muted">Alfredo Hernández, 2020</span>
+    </footer>
+    
+</body>
+</html>
